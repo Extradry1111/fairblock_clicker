@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Fairblock Clicker</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="particles-js"></div>
+
+  <div class="game-container">
+    <h1 class="glow-title">Fairblock Clicker</h1>
+    <div class="score-display glow-text">Coins: <span id="score">0</span></div>
+
+    <button id="click-button">
+      <img src="assets/coin.png" class="click-image" alt="coin" />
+    </button>
+
+    <div class="upgrades">
+      <button class="upgrade" data-value="1" data-cost="50">+1/sec (50)</button>
+      <button class="upgrade" data-value="5" data-cost="200">+5/sec (200)</button>
+      <button class="upgrade" data-value="10" data-cost="500">+10/sec (500)</button>
+      <button class="upgrade" data-value="20" data-cost="1000">+20/sec (1000)</button>
+      <button class="upgrade" data-value="50" data-cost="3000">+50/sec (3000)</button>
+      <button class="upgrade" data-value="100" data-cost="7000">+100/sec (7000)</button>
+      <button class="upgrade" data-value="500" data-cost="20000">+500/sec (20000)</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

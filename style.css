@@ -1,0 +1,66 @@
+body, html {
+  margin: 0; padding: 0; height: 100%;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden; color: #fff;
+  background-color: #0A0A1A;
+}
+#particles-js {
+  position: fixed; width: 100%; height: 100%; z-index: 0;
+}
+
+.game-container {
+  position: relative; z-index: 2; text-align: center; padding-top: 80px;
+}
+.glow-title {
+  font-size: 3rem; color: #58BCF7;
+  text-shadow: 0 0 20px #58BCF7;
+}
+.glow-text {
+  font-size: 1.8rem; margin: 20px 0; color: #E0F4FF;
+  text-shadow: 0 0 10px #58BCF7;
+}
+
+#click-button {
+  background: none; border: none; cursor: pointer;
+}
+.click-image {
+  width: 160px; height: 160px; border-radius: 50%;
+  border: 5px solid #000;
+  box-shadow: 0 0 20px #58BCF7, 0 0 40px #E0F4FF;
+  transition: transform 0.1s;
+}
+#click-button:active .click-image {
+  transform: scale(0.9);
+}
+
+.upgrades {
+  margin-top: 30px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;
+}
+.upgrade {
+  background: transparent; border: 2px solid #58BCF7; color: #58BCF7;
+  padding: 10px 16px; border-radius: 10px; font-size: 1rem; cursor: pointer;
+  transition: 0.3s;
+}
+.upgrade.affordable {
+  background-color: #58BCF733; box-shadow: 0 0 12px #58BCF7;
+}
+.upgrade.not-affordable {
+  opacity: 0.4; cursor: not-allowed; box-shadow: none;
+}
+
+.floating-coin {
+  position: fixed; top: -50px; width: 40px; height: 40px;
+  border-radius: 50%; pointer-events: none; z-index: 5;
+  filter: drop-shadow(0 0 6px #58BCF7);
+}
+
+.down-float {
+  position: fixed; bottom: -100px; width: 150px; height: auto; z-index: 999; opacity: 0;
+  animation: downFade 4s ease-out forwards;
+}
+@keyframes downFade {
+  0% { bottom: -100px; opacity: 0; transform: scale(0.7); }
+  10% { bottom: 20px; opacity: 1; transform: scale(1); }
+  80% { bottom: 30px; opacity: 1; }
+  100% { bottom: 60px; opacity: 0; }
+}
