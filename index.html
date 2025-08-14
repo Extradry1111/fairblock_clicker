@@ -12,9 +12,12 @@
 
   <div class="game-container">
     <h1 class="glow-title">Fairblock Clicker</h1>
-    <div class="score-display glow-text">Coins: <span id="score">0</span></div>
+    <div class="topbar">
+      <div class="score-display glow-text">Coins: <span id="score">0</span></div>
+      <button id="leaderboardBtn" class="pill-btn">Leaderboard</button>
+    </div>
 
-    <button id="click-button">
+    <button id="click-button" aria-label="click">
       <img src="assets/coin.png" class="click-image" alt="coin" />
     </button>
 
@@ -29,7 +32,30 @@
     </div>
   </div>
 
+  <!-- Username Modal -->
+  <div id="usernameModal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Choose a nickname</h2>
+      <input id="usernameInput" maxlength="20" placeholder="Your nickname"/>
+      <button id="saveUsername" class="pill-btn">Save</button>
+    </div>
+  </div>
+
+  <!-- Leaderboard Panel -->
+  <div id="leaderboardPanel" class="sheet hidden">
+    <div class="sheet-header">
+      <h3>Top Players</h3>
+      <button id="closeLeaderboard" class="pill-btn small">Close</button>
+    </div>
+    <div class="sheet-body">
+      <table id="leaderboardTable">
+        <thead><tr><th>#</th><th>Player</th><th>Score</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-  <script src="script.js"></script>
+  <script type="module" src="script.js"></script>
 </body>
 </html>
